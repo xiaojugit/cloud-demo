@@ -1,16 +1,61 @@
 <!--index.wxml-->
 <!-- http://jianzhan.ilingrong.com/exqFrame.jsp?url=%2F%2Fwxapp.webportal.top%2F%2Fpcpreview.jsp%3FwxappId%3D101%26wxappAid%3D421878&from=singlemessage&isappinstalled=0 -->
-<view class="container">
+<view class="container section">
   <swiper 
+    class="home-banner"
     indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" 
     interval="{{interval}}" 
     duration="{{duration}}"
     circular="true">
-    <block wx:for="{{bannerList}}" wx:key="*this">
+    <block wx:for="{{bannerList}}" wx:key="banner">
       <swiper-item>
-         <image mode="scaleToFill" src="{{item.src}}"></image>
+         <image mode="scaleToFill" wx:key="{{item.src}}" src="{{item.src}}"></image>
       </swiper-item>
     </block>
   </swiper>
+</view>
+<view class="section">
+  <image src="{{myImage}}" binderror="imageError"></image>
+</view>
+<view class="section">
+  <view class="title-wrap"><text>您有啥要修,发布在这里</text></view>
+  <form bindsubmit="formSubmit">
+    <view class="form-wrap">
+      <view>
+        <view class="form-label"><text class="must-fill">*</text> 姓名：</view>
+        <input name="fullName" type="text" class="form-input" placeholder="请输入姓名" />
+      </view>
+      <view>
+        <view class="form-label"><text class="must-fill">*</text> 电话：</view>
+        <input name="telphone" type="number" class="form-input" placeholder="请输入你的电话" />
+      </view>
+      <view>
+        <view class="form-label"><text class="must-fill">*</text> 上门时间：</view>
+         <picker mode="date" name="serviceTime">
+          <view class="form-input date-input">请输入日期</view>
+         </picker>
+      </view>
+      <view>
+        <view class="form-label"><text class="must-fill">*</text> 请选择你要的服务：</view>
+        <radio-group class="radio-group" name="serviceType">
+          <radio 
+            class="radio" 
+            wx:for-items="{{serviceTypeList}}" 
+            value="{{item.name}}"
+            checked="{{item.checked}}"
+            wx:key="name"><text>{{item.value}}</text></radio>
+        </radio-group>
+      </view>
+      <view>
+        <view class="form-label"> 图片上传：</view>
+        <view name="image" bindtap="doUpload" class="form-input date-input">可上传损坏部分图片</view>
+      </view>
+      <view>
+        <view class="form-label"> 备注：</view>
+        <textarea class="form-textarea" name="descr" placeholder="可备注家电型号及所需特殊的工具" />
+      </view>
+      <view class="form-label"><button formType="submit" type="primary">马上提交</button></view>
+    </view>
+  </form>
 </view>

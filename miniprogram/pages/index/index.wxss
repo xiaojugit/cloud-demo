@@ -1,10 +1,14 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background: #f4f4f4;
+}
+
+image {
+  width: 100%;
 }
 
 swiper {
@@ -13,7 +17,59 @@ swiper {
   height: 360rpx;
 }
 
-image {
+.home-banner image {
   width: 100%;
   height: 100%;
+}
+
+.section {
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.title-wrap {
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.form-wrap {
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.must-fill {
+  color: #f00;
+}
+
+.form-label {
+  padding: 10px 0;
+  color: #353535;
+  font-size: 14px;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  height: 48px;
+  padding: 10px 15px;
+  background: #f4f4f4;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #353535;
+}
+
+.form-textarea {
+  height: 120px;
+}
+
+.radio {
+  margin-right: 15px;
+  color: #666;
+  font-size: 12px;
+}
+
+.date-input {
+  color: #666;
+  line-height: 28px;
 }
