@@ -33,6 +33,28 @@ swiper {
   border-bottom: 1rpx solid #f0f0f0;
 }
 
+.service-wrap {
+  display: flex;
+  height: 150px;
+}
+
+.service-item {
+  position: relative;
+  width: 33.33333%;
+}
+
+.service-item image {
+  height: 100%;
+}
+
+.service-text {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  font-size: 14px;
+  color: #333333;
+}
+
 .form-wrap {
   padding: 10px 15px;
   box-sizing: border-box;

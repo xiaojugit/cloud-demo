@@ -1,20 +1,72 @@
 <!--miniprogram/pages/my/my.wxml-->
-<view class="container">
+<view class="user-container">
 
   <!-- 用户 openid -->
   <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-avatar"
-      style="background-image: url({{avatarUrl}})"
-    ></button>
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
     <view>
-      <button 
-        open-type="getUserInfo" 
-        bindgetuserinfo="onGetUserInfo"
-        class="userinfo-nickname">{{userInfo.nickName || '请点击登录'}}</button>
+      <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-nickname">{{userInfo.nickName || '请点击登录'}}</button>
     </view>
   </view>
-  
+  <view class="user-wrap">
+    <view class="info-wrap">
+      <view class="info-item">
+        <view class="item-title all-order">所有订单</view>
+        <view class="order-status-wrap">
+          <view class="order-status">
+            <view class="status-icon"></view>
+            <view>待支付</view>
+            <text class="tip-bubble">1</text>
+          </view>
+          <view class="order-status">
+            <view class="status-icon"></view>
+            <view>待支付</view>
+            <text class="tip-bubble">3</text>
+          </view>
+          <view class="order-status">
+            <view class="status-icon"></view>
+            <view>待支付</view>
+          </view>
+          <view class="order-status">
+            <view class="status-icon"></view>
+            <view>待支付</view>
+          </view>
+        </view>
+      </view>
+      <view class="info-item">
+        <view class="item-title">最新消息</view>
+        <view class="message-item">
+          <view class="service-info">
+            <view class="service-img-wrap">
+              <image src="../../images/3.jpg"></image>
+            </view>
+            <view class="service-name ellipsis">小程序服务（示例数据）</view>
+            <view class="service-intro ellipsis">专业提供微信小程序管理、设计服务</view>
+          </view>
+          <view class="message">专业！服务好！（示例数据）</view>
+        </view>
+      </view>
+      <view class="info-item">
+        <view class="row-item">
+          <image class="address-icon" src="../../images/icon-home.png"></image>
+          <text class="item-text">xxx省xxx市xxx县xxx路xxx号</text>
+          <text class="dist">100m</text>
+          <i>></i>
+        </view>
+        <view class="row-item">
+          <image class="address-icon" src="../../images/icon-home.png"></image>
+          <text class="item-text">18500000000</text>
+          <i>></i>
+        </view>
+        <view class="row-item">
+          <image class="address-icon" src="../../images/icon-home.png"></image>
+          <text class="item-text">周一至周五 09:00-18:00</text>
+        </view>
+        <view class="row-item">
+          <image class="address-icon" src="../../images/icon-home.png"></image>
+          <text class="item-text">这是生活服务的预约类模板</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
