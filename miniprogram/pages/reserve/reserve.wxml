@@ -1,0 +1,4 @@
+<view class="section">
+  <image src="../../images/banner1.jpg"></image>
+</view>
+<reserve-form></reserve-form>

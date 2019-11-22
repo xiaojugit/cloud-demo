@@ -11,31 +11,31 @@
   <view class="user-wrap">
     <view class="info-wrap">
       <view class="info-item">
-        <view class="item-title all-order">所有订单</view>
+        <navigator url="/pages/order/order" class="item-title all-order" hover-class="none">所有订单</navigator>
         <view class="order-status-wrap">
-          <view class="order-status">
+          <navigator url="/pages/order/order" class="order-status" hover-class="none">
             <view class="status-icon"></view>
-            <view>待支付</view>
+            <view>未派单</view>
             <text class="tip-bubble">1</text>
-          </view>
-          <view class="order-status">
+          </navigator>
+          <navigator url="/pages/order/order" class="order-status" hover-class="none">
             <view class="status-icon"></view>
-            <view>待支付</view>
+            <view>进行中</view>
             <text class="tip-bubble">3</text>
-          </view>
-          <view class="order-status">
+          </navigator>
+          <navigator url="/pages/order/order" class="order-status" hover-class="none">
             <view class="status-icon"></view>
-            <view>待支付</view>
-          </view>
-          <view class="order-status">
+            <view>已完成</view>
+          </navigator>
+          <navigator url="/pages/order/order" class="order-status" hover-class="none">
             <view class="status-icon"></view>
-            <view>待支付</view>
-          </view>
+            <view>已取消</view>
+          </navigator>
         </view>
       </view>
       <view class="info-item">
         <view class="item-title">最新消息</view>
-        <view class="message-item">
+        <navigator url="/pages/article/article" hover-class="none" class="message-item">
           <view class="service-info">
             <view class="service-img-wrap">
               <image src="../../images/3.jpg"></image>
@@ -44,7 +44,7 @@
             <view class="service-intro ellipsis">专业提供微信小程序管理、设计服务</view>
           </view>
           <view class="message">专业！服务好！（示例数据）</view>
-        </view>
+        </navigator>
       </view>
       <view class="info-item">
         <view class="row-item">
