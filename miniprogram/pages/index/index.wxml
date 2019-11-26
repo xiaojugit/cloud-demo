@@ -10,28 +10,76 @@
   </swiper>
 </view>
 <view class="section service-wrap">
-  <view class="service-item">
+  <navigator class="service-item" url="/pages/reserve/reserve" hover-class="none">
     <image class="service-img" src="../../images/1.jpg" binderror="imageError"></image>
     <view class="service-text text-content">
       <view>家电维修</view>
       <view>预约>></view>
     </view>
-  </view>
-  <view class="service-item">
+  </navigator>
+  <navigator class="service-item" url="/pages/reserve/reserve" hover-class="none">
     <image class="service-img" src="../../images/2.jpg" binderror="imageError"></image>
     <view class="service-text text-content">
       <view>家电清洗</view>
       <view>预约>></view>
     </view>
-  </view>
-  <view class="service-item">
+  </navigator>
+  <navigator class="service-item" url="/pages/reserve/reserve" hover-class="none">
     <image class="service-img" src="../../images/3.jpg" binderror="imageError"></image>
     <view class="service-text text-content">
       <view>家电拆装</view>
       <view>预约>></view>
     </view>
+  </navigator>
+</view>
+<view class="service-step-wrap">
+  <view class="service-step" wx:for="{{serviceSteps}}" wx:key="{{item.title}}">
+    <view class="reserve-nav">
+      <view class="progress-title-wrap">
+        <view class="main-title">{{item.title}}</view>
+        <view class="sub-heading">{{item.desc}}</view>
+      </view>
+      <view class="progress-icon" style="background-image: url({{item.icon}});"></view>
+    </view>
   </view>
 </view>
+
+<view class="worker-wrap">
+  <view class="worker-item" wx:for="{{serviceSteps}}" wx:key="{{item.title}}">
+    <block wx:if="{{index%2===0}}">
+      <view class="worker-info">
+        <view class="name">吴师傅</view>
+        <view class="working-years">12年维修经验</view>
+      </view>
+      <view class="worker-photo">
+        <image src="../../images/3.jpg" binderror="imageError"></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="worker-photo">
+        <image src="../../images/3.jpg" binderror="imageError"></image>
+      </view>
+      <view class="worker-info">
+        <view class="name">吴师傅</view>
+        <view class="working-years">12年维修经验</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="section vote-wrap">
+  <view class="vote-title">人气维修师傅评选</view>
+  <view class="vote-time">投票已于 2019-09-05 11:42:22 结束</view>
+  <view class="vote-list">
+    <view class="vote-item">
+      <image src="../../images/icon1.png" binderror="imageError"></image>
+    </view>
+    <view class="vote-item">
+  
+    </view>
+  </view>
+</view>
+
 <view class="section">
   <image src="{{myImage}}" binderror="imageError"></image>
 </view>
