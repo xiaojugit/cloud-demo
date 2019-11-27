@@ -1,2 +1,5 @@
-<!--miniprogram/pages/order/order.wxml-->
-<text>miniprogram/pages/order/order.wxml</text>
+<view class="order-container">
+  <view class="section order-tab-nav">
+    <view class="order-tab-item {{item.active ? 'active' : ''}}" data-type="{{item.code}}" wx:for="{{typeList}}" wx:key="item.code" bindtap="tapOrderTab">{{item.name}}</view>
+  </view>
+</view>

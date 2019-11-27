@@ -10,7 +10,7 @@
   </swiper>
 </view>
 <view class="section service-wrap">
-  <navigator class="service-item" url="/pages/reserve/reserve" hover-class="none">
+  <navigator class="service-item" url="/pages/reserve/reserve" hover-class="none" open-type="switchTab">
     <image class="service-img" src="../../images/1.jpg" binderror="imageError"></image>
     <view class="service-text text-content">
       <view>家电维修</view>

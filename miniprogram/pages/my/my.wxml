@@ -11,23 +11,23 @@
   <view class="user-wrap">
     <view class="info-wrap">
       <view class="info-item">
-        <navigator url="/pages/order/order" class="item-title all-order" hover-class="none">所有订单</navigator>
+        <navigator url="/pages/order/order?type=0" class="item-title all-order" hover-class="none">所有订单</navigator>
         <view class="order-status-wrap">
-          <navigator url="/pages/order/order" class="order-status" hover-class="none">
+          <navigator url="/pages/order/order?type=1" class="order-status" hover-class="none">
             <view class="status-icon"></view>
             <view>未派单</view>
             <text class="tip-bubble">1</text>
           </navigator>
-          <navigator url="/pages/order/order" class="order-status" hover-class="none">
+          <navigator url="/pages/order/order?type=2" class="order-status" hover-class="none">
             <view class="status-icon"></view>
             <view>进行中</view>
             <text class="tip-bubble">3</text>
           </navigator>
-          <navigator url="/pages/order/order" class="order-status" hover-class="none">
+          <navigator url="/pages/order/order?type=3" class="order-status" hover-class="none">
             <view class="status-icon"></view>
             <view>已完成</view>
           </navigator>
-          <navigator url="/pages/order/order" class="order-status" hover-class="none">
+          <navigator url="/pages/order/order?type=4" class="order-status" hover-class="none">
             <view class="status-icon"></view>
             <view>已取消</view>
           </navigator>

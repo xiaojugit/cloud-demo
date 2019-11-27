@@ -32,6 +32,11 @@ button::after {
   white-space: pre-wrap;
 }
 
+.section {
+  margin-bottom: 10px;
+  background: #fff;
+}
+
 
 
 
