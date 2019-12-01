@@ -80,9 +80,9 @@
   </view>
 </view>
 
-<view class="section">
+<!-- <view class="section">
   <image src="{{myImage}}" binderror="imageError"></image>
-</view>
+</view> -->
 <!-- <view class="section" style="">
   <map style="width: 100%; height: 300px;" latitude="30.1841049080" longitude="120.2642333508"></map>
 </view> -->

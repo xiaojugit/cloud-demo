@@ -41,3 +41,12 @@
   color: #666;
   line-height: 28px;
 }
+
+.preview-img {
+  height: auto;
+  min-height: 48px;
+}
+
+.preview-img image {
+  width: 100%;
+}

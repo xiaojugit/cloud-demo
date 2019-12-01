@@ -1,5 +1,6 @@
 //index.js
-const app = getApp()
+const app = getApp();
+const { apiUrl } = app.globalConfig;
 
 Page({
   data: {
@@ -12,9 +13,8 @@ Page({
       },
     ],
     indicatorDots: true,
-    vertical: false,
     autoplay: false,
-    interval: 2000,
+    interval: 2500,
     duration: 500,
     serviceSteps: [
       { title: '1、预约服务', desc: '在线预约登记', icon: '../../images/icon1.png'},
@@ -26,11 +26,7 @@ Page({
       { name: 'WX', value: '家电维修', checked: 'true' },
       { name: 'QX', value: '家电清洗' },
       { name: 'CZ', value: '家电拆装' },
-    ],
-    bookingData: {
-      imageId: ''
-    },
-    myImage: ''
+    ]
   },
 
   onLoad: function() {
@@ -40,12 +36,33 @@ Page({
       })
       return
     }
-    wx.cloud.getTempFileURL({
-      fileList: ['cloud://demo-bchvt.6465-demo-bchvt-1300634251/my-image.png'],
-    }).then((res) => {
-      this.setData({
-        myImage: res.fileList[0].tempFileURL
-      })
+    // wx.cloud.getTempFileURL({
+    //   fileList: ['cloud://demo-bchvt.6465-demo-bchvt-1300634251/my-image.png'],
+    // }).then((res) => {
+    //   this.setData({
+    //     myImage: res.fileList[0].tempFileURL
+    //   })
+    // })
+
+
+
+    wx.request({
+      // url: apiUrl + '/bannerList.php', 
+      url: 'https://cnodejs.org/api/v1/topics',
+      data: {},
+      success(res) {
+        console.log('------------', res.data)
+        let bannerList = res.data;
+        this.setData({
+          bannerList
+        })
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '请求失败~'
+        })
+      }
     })
   },
 

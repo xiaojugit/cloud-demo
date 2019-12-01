@@ -10,11 +10,20 @@
         <text class="must-fill">*</text> 电话：</view>
       <input name="telphone" type="number" class="form-input" placeholder="请输入你的电话" />
     </view>
+    <!-- <view>
+      <view class="form-label">
+        <text class="must-fill">*</text> 上门时间：
+      </view>
+      <picker mode="date" name="servicee">
+        <view class="form-input date-input">请输入日期</view>
+      </picker>
+    </view> -->
     <view>
       <view class="form-label">
-        <text class="must-fill">*</text> 上门时间：</view>
-      <picker mode="date" name="serviceTime">
-        <view class="form-input date-input">请输入日期</view>
+        <text class="must-fill">*</text> 上门时间：
+      </view>
+      <picker mode="multiSelector" value="{{dateTimeValue}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" name="dateTime" range="{{dateTimeArray}}">
+        <view class="form-input date-input">{{bookingData.serviceTime ? bookingData.serviceTime : '请输入日期时间'}}</view>
       </picker>
     </view>
     <view>
@@ -28,7 +37,11 @@
     </view>
     <view>
       <view class="form-label"> 图片上传：</view>
-      <view name="image" bindtap="doUpload" class="form-input date-input">可上传损坏部分图片</view>
+      <view name="image" bindtap="doUpload" class="form-input date-input preview-img">
+        <image wx:if="{{uploadImage}}" mode="aspectFit" src="{{uploadImage}}"></image>
+        <text wx:else >可上传损坏部分图片</text> 
+      </view>
+      
     </view>
     <view>
       <view class="form-label"> 备注：</view>

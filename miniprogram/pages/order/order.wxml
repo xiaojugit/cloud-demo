@@ -2,4 +2,37 @@
   <view class="section order-tab-nav">
     <view class="order-tab-item {{item.active ? 'active' : ''}}" data-type="{{item.code}}" wx:for="{{typeList}}" wx:key="item.code" bindtap="tapOrderTab">{{item.name}}</view>
   </view>
+  <view class="section order-list">
+    <view class="order-item-wrap">
+      <view class="order-item-header">
+        <text>单号:1234567890</text>
+        <text class="order-status">未处理</text>
+      </view>
+      <view class="order-item-content">
+        <view class="order-item-row">
+          <text>预约人：</text>
+          <text class="order-info">家ff</text>
+        </view>
+        <view class="order-item-row">
+          <text>预约电话：</text>
+          <text class="order-info">12345678999</text>
+        </view>
+        <view class="order-item-row">
+          <text>服务时间：</text>
+          <text class="order-info">2019-12-12 14:30</text>
+        </view>
+        <view class="order-item-row">
+          <text>服务类型：</text>
+          <text class="order-info">家电维修</text>
+        </view>
+        <view class="order-item-row">
+          <text>备注：</text>
+          <text class="order-info">备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注</text>
+        </view>
+      </view>
+      <view class="order-item-footer">
+         <text class="order-operate-btn">取消预约</text>
+      </view>
+    </view>
+  </view>
 </view>
