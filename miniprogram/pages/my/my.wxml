@@ -35,7 +35,7 @@
       </view>
       <view class="info-item">
         <view class="item-title">最新消息</view>
-        <navigator url="/pages/article/article" hover-class="none" class="message-item">
+        <navigator url="/pages/article/article?id=3" hover-class="none" class="message-item">
           <view class="service-info">
             <view class="service-img-wrap">
               <image src="../../images/3.jpg"></image>

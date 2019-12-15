@@ -1,2 +1,1 @@
-<!--miniprogram/pages/article/article.wxml-->
-<text>miniprogram/pages/article/article.wxml</text>
+<rich-text nodes="{{content}}" class="rich-text"></rich-text>

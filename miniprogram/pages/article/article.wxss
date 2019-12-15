@@ -1,1 +1,7 @@
 /* miniprogram/pages/article/article.wxss */
+page {
+  background: #fff;
+}
+.rich-text{
+  padding: 20px 15px;
+}

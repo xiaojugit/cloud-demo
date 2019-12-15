@@ -52,12 +52,12 @@
         <view class="working-years">12年维修经验</view>
       </view>
       <view class="worker-photo">
-        <image src="../../images/3.jpg" binderror="imageError"></image>
+        <image src="../../images/worker.jpg" binderror="imageError"></image>
       </view>
     </block>
     <block wx:else>
       <view class="worker-photo">
-        <image src="../../images/3.jpg" binderror="imageError"></image>
+        <image src="../../images/worker.jpg" binderror="imageError"></image>
       </view>
       <view class="worker-info">
         <view class="name">吴师傅</view>
@@ -71,12 +71,28 @@
   <view class="vote-title">人气维修师傅评选</view>
   <view class="vote-time">投票已于 2019-09-05 11:42:22 结束</view>
   <view class="vote-list">
-    <view class="vote-item">
-      <image src="../../images/icon1.png" binderror="imageError"></image>
+    <view class="vote-item" wx:for="{{workerList}}">
+      <view class="vote-number">{{index+1}}</view>
+      <view class="image-wrap">
+        <image src="../../images/worker.jpg" mode="widthFix" binderror="imageError"></image>
+      </view>
+      <view class="name">吴师傅</view>
+      <view class="stars">26票</view>
+      <view class="vote-btn">投票</view>
     </view>
-    <view class="vote-item">
-  
-    </view>
+  </view>
+</view>
+
+<view class="section">
+  <view class="article-wrap">
+    <navigator class="article-item" url="/pages/article/article?id=2" hover-class="none">
+      <image src="../../images/repair.jpg" mode="widthFix" binderror="imageError"></image>
+      <view class="article-title">维修场景</view>
+    </navigator>
+    <!-- <view class="article-item">
+      <image src="../../images/repair.jpg" mode="widthFix" binderror="imageError"></image>
+      <view class="article-title">维修场景</view>
+    </view> -->
   </view>
 </view>
 

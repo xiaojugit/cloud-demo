@@ -13,7 +13,7 @@ App({
     this.globalData = {}
 
     this.globalConfig = {
-      apiUrl: 'http://192.168.88.187'
+      apiUrl: 'http://192.168.88.117:8083'
     }
   }
 })
